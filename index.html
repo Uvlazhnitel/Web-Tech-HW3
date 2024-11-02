@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<!--
+Iļja Junkins ij23031
+-->
+<html>
+    <head>
+        <title>Exchange Rates</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="rates.js"></script>
+        <script src="homework3.js"></script>
+        <style>
+            #form {
+                width:200px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            #calculator-rate-info {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="section-calculator">
+            <h2>Currency exchange calculator</h2>
+            <div>
+                <label for="date-on">Date:</label>      
+                <input type="text" id="date-on">
+            </div>             
+            <div id="form">
+                <label for="amount-sell">Sell:</label>
+                <label for="amount-buy">Buy:</label>
+                <select id="currency-sell"></select>
+                <select id="currency-buy"></select>
+                <input type="text" id="amount-sell" placeholder="Amount to sell">
+                <input type="text" id="amount-buy" placeholder="Amount to buy">
+            </div>
+            <div id="calculator-rate-info">1 EUR=<span id="calculator-rate"></span> <span id="calculator-currency"></span></div>
+            <div id="buttons">
+                <button id="convert">Convert</button>
+            </div>
+        </section>
+        <h3>Source: <span id="rates-source"></span></h3>
+    </body>
+</html>
